@@ -6,7 +6,18 @@ namespace game
 
 class Moving_object;
 
-/** \brief Base class for command, executed on object
+
+/** \brief Implementation of command on object
+ *
+ */
+class Command_implementation
+{
+public:
+    virtual void execute(Moving_object * object) = 0;
+    virtual void redo   (Moving_object * object) = 0;
+};
+
+/** \brief Class for command, executed on object
  *
  *  Every derived class should implement execute, redo
  *  and initialize time stamp in constructor as SDL_GetTicks().
@@ -16,17 +27,10 @@ class Moving_object;
 class Object_command
 {
 public:
-    virtual void execute(Moving_object * object) = 0;
-    virtual void redo   (Moving_object * object) = 0;
-    virtual ~Object_command(){}
-    Object_command *& get_next()
-    {
-        return next_;
-    }
-    Object_command *& get_previous()
-    {
-        return previous_;
-    }
+    Object_command();
+    Object_command(unsigned int timestamp);
+    void execute(Moving_object * object);
+    void redo   (Moving_object * object);
     unsigned int get_time()
     {
         return timestamp_;
@@ -37,8 +41,7 @@ public:
     }
 protected:
     unsigned int timestamp_;
-    Object_command * next_;
-    Object_command * previous_;
+    Command_implementation * implementation_;
 };
 
 }

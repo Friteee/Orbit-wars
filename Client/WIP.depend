@@ -9112,3 +9112,664 @@
 	"static_object.h"
 	"../main_logic/game_logic.h"
 
+1436532135 source:d:\github\orbit-wars\client\includes\audio\audio.cpp
+	<SDL_mixer.h>
+	<cstdio>
+	"audio.h"
+
+1376160025 d:\github\orbit-wars\client\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1414427206 d:\github\orbit-wars\client\sdl2\sdl_config.h
+	"SDL_platform.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\begin_code.h
+
+1414427207 d:\github\orbit-wars\client\sdl2\close_code.h
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427206 d:\github\orbit-wars\client\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1414427206 d:\github\orbit-wars\client\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<intrin.h>
+	<libkern/OSAtomic.h>
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436532117 d:\github\orbit-wars\client\includes\audio\audio.h
+
+1436532179 source:d:\github\orbit-wars\client\includes\audio\music.cpp
+	"music.h"
+	<cstdio>
+
+1436532117 d:\github\orbit-wars\client\includes\audio\music.h
+	<SDl_mixer.h>
+	<string>
+	<memory>
+
+1436532219 source:d:\github\orbit-wars\client\includes\audio\sound.cpp
+	"sound.h"
+	<cstdio>
+
+1436532117 d:\github\orbit-wars\client\includes\audio\sound.h
+	<SDl_mixer.h>
+	<string>
+	<memory>
+
+1442677643 source:d:\github\orbit-wars\client\includes\game\map.cpp
+	"map.h"
+	<fstream>
+	<map>
+	<vector>
+
+1442677672 d:\github\orbit-wars\client\includes\game\map.h
+	<string>
+	<vector>
+	"static_object.h"
+	"../gui/background.h"
+	"../audio/music.h"
+
+1440180045 d:\github\orbit-wars\client\includes\game\static_object.h
+	<SDL.h>
+	"../physics/polygon.h"
+	"object_type.h"
+
+1414427206 d:\github\orbit-wars\client\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427206 d:\github\orbit-wars\client\sdl2\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1414427206 d:\github\orbit-wars\client\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427206 d:\github\orbit-wars\client\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<mmintrin.h>
+	<mm3dnow.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_pixels.h
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427206 d:\github\orbit-wars\client\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"begin_code.h"
+	"close_code.h"
+
+1414427207 d:\github\orbit-wars\client\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436633934 d:\github\orbit-wars\client\includes\physics\polygon.h
+	<SDL.h>
+	<vector>
+
+1442677779 d:\github\orbit-wars\client\includes\game\object_type.h
+	<string>
+	<SDL.h>
+	"../video/texture.h"
+
+1438533288 d:\github\orbit-wars\client\includes\video\texture.h
+	<string>
+	<memory>
+	<SDL.h>
+	<SDL_ttf.h>
+
+1376160143 d:\github\orbit-wars\client\sdl2\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1436636410 d:\github\orbit-wars\client\includes\gui\background.h
+	<stdio.h>
+	<SDL.h>
+	"../video/texture.h"
+	<string>
+	<memory>
+	<deque>
+
+1442677843 source:d:\github\orbit-wars\client\includes\game\object_type.cpp
+	"object_type.h"
+	"../video/camera.h"
+
+1436634385 d:\github\orbit-wars\client\includes\video\camera.h
+	<SDL.h>
+
+1442755540 source:d:\github\orbit-wars\client\includes\game\player.cpp
+	"player.h"
+
+1442755524 d:\github\orbit-wars\client\includes\game\player.h
+	<mutex>
+	"moving_object.h"
+	"object_command.h"
+
+1442755435 d:\github\orbit-wars\client\includes\game\moving_object.h
+	"object_command.h"
+	"static_object.h"
+	"object_state.h"
+	"../physics/physics_component.h"
+
+1442754650 d:\github\orbit-wars\client\includes\game\object_command.h
+
+1436798929 d:\github\orbit-wars\client\includes\game\object_state.h
+
+1438450962 d:\github\orbit-wars\client\includes\physics\physics_component.h
+	<memory>
+	<SDL.h>
+	"polygon.h"
+	"../game/moving_object.h"
+	"../game/static_object.h"
+
+1440180043 source:d:\github\orbit-wars\client\includes\game\static_object.cpp
+	"static_object.h"
+	"../main_logic/game_logic.h"
+
+1436797594 d:\github\orbit-wars\client\includes\main_logic\game_logic.h
+	"../video/video_subsystem.h"
+	"../gui/background.h"
+	"../video/camera.h"
+	"../utility/configuration.h"
+	"../audio/audio.h"
+	"../physics/physics_engine.h"
+	"gaming_mode.h"
+	"main_menu_mode.h"
+
+1438533240 d:\github\orbit-wars\client\includes\video\video_subsystem.h
+	<SDL.h>
+
+1436634111 d:\github\orbit-wars\client\includes\utility\configuration.h
+	<string>
+	<vector>
+
+1438453049 d:\github\orbit-wars\client\includes\physics\physics_engine.h
+	"polygon.h"
+	"physics_component.h"
+	"../game/static_object.h"
+	<vector>
+	<mutex>
+	<list>
+	<thread>
+	<atomic>
+
+1436534229 d:\github\orbit-wars\client\includes\main_logic\gaming_mode.h
+	"program_mode.h"
+	"../gui/background.h"
+	"../gui/gui_manager.h"
+	"../video/texture.h"
+	"../gui/text.h"
+	"../audio/music.h"
+	<string>
+
+1434285219 d:\github\orbit-wars\client\includes\main_logic\program_mode.h
+	"../utility/configuration.h"
+	<SDL.h>
+
+1436533489 d:\github\orbit-wars\client\includes\gui\gui_manager.h
+	"gui_element.h"
+	<vector>
+
+1436533121 d:\github\orbit-wars\client\includes\gui\gui_element.h
+	<SDL.h>
+	"../video/texture.h"
+
+1436727520 d:\github\orbit-wars\client\includes\gui\text.h
+	"text.h"
+	"gui_element.h"
+	"../utility/configuration.h"
+	<string>
+	<memory>
+
+1436534344 d:\github\orbit-wars\client\includes\main_logic\main_menu_mode.h
+	"program_mode.h"
+	"../gui/text_button.h"
+	"../gui/gui_manager.h"
+	"../gui/background.h"
+	"../gui/button.h"
+	"../audio/music.h"
+
+1436533732 d:\github\orbit-wars\client\includes\gui\text_button.h
+	"gui_element.h"
+	<functional>
+	"../utility/configuration.h"
+
+1436532973 d:\github\orbit-wars\client\includes\gui\button.h
+	"../video/texture.h"
+	"gui_element.h"
+
+1438452190 source:d:\github\orbit-wars\client\includes\game\tile.cpp
+
+1436636447 source:d:\github\orbit-wars\client\includes\gui\background.cpp
+	<stdio.h>
+	<SDL.h>
+	<string>
+	<memory>
+	"background.h"
+
+1436636447 source:d:\github\orbit-wars\client\includes\gui\button.cpp
+	"button.h"
+	<cstdio>
+
+1436533045 source:d:\github\orbit-wars\client\includes\gui\click.cpp
+	"click.h"
+
+1436533008 d:\github\orbit-wars\client\includes\gui\click.h
+	<SDL.h>
+
+1436533468 source:d:\github\orbit-wars\client\includes\gui\gui_manager.cpp
+	"gui_manager.h"
+	"click.h"
+	<cstdio>
+
+1436636476 source:d:\github\orbit-wars\client\includes\gui\progress_bar.cpp
+	<cassert>
+	"progress_bar.h"
+	"../video/video_subsystem.h"
+	<cstdio>
+	<assert.h>
+
+1436533518 d:\github\orbit-wars\client\includes\gui\progress_bar.h
+	<functional>
+	"../utility/stopwatch.h"
+	"gui_element.h"
+
+1436634152 d:\github\orbit-wars\client\includes\utility\stopwatch.h
+
+1436727581 source:d:\github\orbit-wars\client\includes\gui\text.cpp
+	"text.h"
+	"../utility/functions.h"
+	<cstdio>
+
+1431781618 d:\github\orbit-wars\client\includes\utility\functions.h
+	<string>
+	<vector>
+	<vector>
+	<string>
+
+1436636470 source:d:\github\orbit-wars\client\includes\gui\text_button.cpp
+	"text_button.h"
+	<functional>
+	"../utility/configuration.h"
+	"../utility/functions.h"
+	"../utility/stopwatch.h"
+	<vector>
+	<cstdio>
+
+1436637326 source:d:\github\orbit-wars\client\includes\main.cpp
+	<SDL.h>
+	"main_logic/game_logic.h"
+	<stdio.h>
+
+1436797650 source:d:\github\orbit-wars\client\includes\main_logic\game_logic.cpp
+	<SDL.h>
+	<stdio.h>
+	"game_logic.h"
+	"../video/video_subsystem.h"
+	"../video/camera.h"
+	"../utility/stopwatch.h"
+	"../utility/functions.h"
+	"../utility/configuration.h"
+	<cstdlib>
+
+1436799299 source:d:\github\orbit-wars\client\includes\main_logic\gaming_mode.cpp
+	"gaming_mode.h"
+	"main_menu_mode.h"
+	"game_logic.h"
+	"../gui/progress_bar.h"
+	"../gui/click.h"
+	"../audio/music.h"
+	"../game/moving_object.h"
+	<cstdlib>
+	<sstream>
+
+1436798330 source:d:\github\orbit-wars\client\includes\main_logic\main_menu_mode.cpp
+	<cstdio>
+	<cmath>
+	"main_menu_mode.h"
+	"gaming_mode.h"
+	"game_logic.h"
+	"../gui/click.h"
+	"../gui/button.h "
+
+1438452247 source:d:\github\orbit-wars\client\includes\physics\falling_object_physics.cpp
+	"falling_object_physics.h"
+
+1438450978 d:\github\orbit-wars\client\includes\physics\falling_object_physics.h
+	"physics_component.h"
+	<SDL.h>
+
+1438453122 source:d:\github\orbit-wars\client\includes\physics\physics_engine.cpp
+	"physics_engine.h"
+	"../utility/stopwatch.h"
+	<chrono>
+
+1436634035 source:d:\github\orbit-wars\client\includes\physics\polygon.cpp
+	"polygon.h"
+
+1436634211 source:d:\github\orbit-wars\client\includes\utility\configuration.cpp
+	"configuration.h"
+	<fstream>
+	<string>
+	<vector>
+
+1431767918 source:d:\github\orbit-wars\client\includes\utility\functions.cpp
+	<sstream>
+	<vector>
+	<cstdio>
+
+1442757755 source:d:\github\orbit-wars\client\includes\utility\sorted_list.cpp
+
+1442757706 d:\github\orbit-wars\client\includes\utility\sorted_list.h
+	<utility>
+
+1436634268 source:d:\github\orbit-wars\client\includes\utility\stopwatch.cpp
+	"stopwatch.h"
+	<SDL.h>
+
+1436634315 source:d:\github\orbit-wars\client\includes\utility\timer.cpp
+	"timer.h"
+	<cstdio>
+
+1436634152 d:\github\orbit-wars\client\includes\utility\timer.h
+	<functional>
+	"stopwatch.h"
+
+1436634370 source:d:\github\orbit-wars\client\includes\video\animation.cpp
+	"animation.h"
+
+1436634152 d:\github\orbit-wars\client\includes\video\animation.h
+	<string>
+	<vector>
+	"texture.h"
+	"../utility/stopwatch.h"
+
+1436635558 source:d:\github\orbit-wars\client\includes\video\camera.cpp
+	<SDL.h>
+	<stdio.h>
+	"camera.h"
+	"video_subsystem.h"
+
+1438533583 source:d:\github\orbit-wars\client\includes\video\texture.cpp
+	<cassert>
+	"texture.h"
+	"video_subsystem.h"
+	"camera.h"
+	<assert.h>
+	<cstdio>
+
+1438533213 source:d:\github\orbit-wars\client\includes\video\video_subsystem.cpp
+	<SDL.h>
+	<stdio.h>
+	"video_subsystem.h"
+

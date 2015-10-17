@@ -3,6 +3,7 @@
 
 #include <mutex>
 #include "moving_object.h"
+#include "object_command.h"
 
 
 namespace game
@@ -17,8 +18,6 @@ public:
     void           notify(Object_command * command)override;
 
     void           update()override;
-
-    Object_state * get_state()override;
 
     int            get_x()override;
 

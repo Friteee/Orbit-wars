@@ -70,8 +70,6 @@ protected:
     // newest command to the object
     Object_command                            * oldest_;
     Object_command                            * newest_;
-    // current object state
-    Object_state                              * current_state_;
 
 };
 
