@@ -111,6 +111,7 @@
 		<Unit filename="includes/network/packet.h" />
 		<Unit filename="includes/physics/falling_object_physics.cpp" />
 		<Unit filename="includes/physics/falling_object_physics.h" />
+		<Unit filename="includes/physics/movement_command.cpp" />
 		<Unit filename="includes/physics/movement_command.h" />
 		<Unit filename="includes/physics/physics_component.h" />
 		<Unit filename="includes/physics/physics_engine.cpp" />
@@ -121,8 +122,6 @@
 		<Unit filename="includes/utility/configuration.h" />
 		<Unit filename="includes/utility/functions.cpp" />
 		<Unit filename="includes/utility/functions.h" />
-		<Unit filename="includes/utility/sorted_list.cpp" />
-		<Unit filename="includes/utility/sorted_list.h" />
 		<Unit filename="includes/utility/stopwatch.cpp" />
 		<Unit filename="includes/utility/stopwatch.h" />
 		<Unit filename="includes/utility/timer.cpp" />

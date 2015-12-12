@@ -1,11 +1,11 @@
-#ifndef OBJECT_COMMAND_H_INCLUDED
-#define OBJECT_COMMAND_H_INCLUDED
+#ifndef OBJECT_COMMAND_H_INCLUDEDS
+#define OBJECT_COMMAND_H_INCLUDEDS
+
 
 namespace game
 {
 
 class Moving_object;
-
 
 /** \brief Implementation of command on object
  *
@@ -15,6 +15,7 @@ class Command_implementation
 public:
     virtual void execute(Moving_object * object) = 0;
     virtual void redo   (Moving_object * object) = 0;
+    virtual ~Command_implementation(){}
 };
 
 /** \brief Class for command, executed on object
@@ -27,18 +28,26 @@ public:
 class Object_command
 {
 public:
-    Object_command();
-    Object_command(unsigned int timestamp);
+    Object_command(Command_implementation * implementation);
+    Object_command(unsigned int timestamp , Command_implementation * implementation);
+    ~Object_command();
     void execute(Moving_object * object);
     void redo   (Moving_object * object);
+    bool operator<(const Object_command& rhs) const;
+    bool operator>(const Object_command& rhs) const;
+    bool operator<=(const Object_command& rhs) const;
+    bool operator>=(const Object_command& rhs) const;
+
     unsigned int get_time()
     {
         return timestamp_;
     }
+
     void set_timestamp( unsigned int set_time)
     {
         timestamp_ = set_time;
     }
+
 protected:
     unsigned int timestamp_;
     Command_implementation * implementation_;

@@ -1,18 +1,22 @@
 #ifndef MOVING_OBJECT_H_INCLUDE
 #define MOVING_OBJECT_H_INCLUDE
 
+#include <set>
+
 namespace physics
 {
     class Physics_component;
 }
 
-#include "object_command.h"
 #include "static_object.h"
-#include "object_state.h"
+#include "object_command.h"
 #include "../physics/physics_component.h"
+
 
 namespace game
 {
+
+class Object_command;
 
 enum Moving_object_type
 {
@@ -30,11 +34,9 @@ class Moving_object
 {
 public:
 
-    virtual void           notify(Object_command * command)        = 0;
+    virtual void           notify(Object_command command)          = 0;
 
     virtual void           update()                                = 0;
-
-    virtual Object_state * get_state()                             = 0;
 
     virtual int            get_x()                                 = 0;
 
@@ -47,8 +49,6 @@ public:
     virtual void           notify_collision(Static_object * other) = 0;
     //show function
     virtual void           show() = 0;
-
-    virtual void           change_state(Object_state & init_state) = 0;
 
     virtual ~Moving_object(){}
 
@@ -68,8 +68,7 @@ protected:
     // type of the moving object
     Moving_object_type                          type_;
     // newest command to the object
-    Object_command                            * oldest_;
-    Object_command                            * newest_;
+    std::multiset<Object_command>               commands_;
 
 };
 

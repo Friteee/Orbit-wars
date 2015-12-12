@@ -3,8 +3,6 @@
 
 #include <mutex>
 #include "moving_object.h"
-#include "object_command.h"
-
 
 namespace game
 {
@@ -15,7 +13,7 @@ public:
 
     Player();
 
-    void           notify(Object_command * command)override;
+    void           notify(Object_command command)override;
 
     void           update()override;
 
@@ -32,9 +30,8 @@ public:
     void           show();
 
 protected:
-    int              x_ , y_;
-    physics::Polygon player_polygon_;
-    std::mutex       command_mutex_;
+    int                                  x_ , y_;
+    std::mutex                           command_mutex_;
 
 
 };
