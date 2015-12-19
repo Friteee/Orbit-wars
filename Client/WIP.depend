@@ -9472,7 +9472,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1436630334 d:\github\orbit-wars\client\includes\physics\polygon.h
+1450541965 d:\github\orbit-wars\client\includes\physics\polygon.h
 	<SDL.h>
 	<vector>
 
@@ -9507,7 +9507,7 @@
 1436630785 d:\github\orbit-wars\client\includes\video\camera.h
 	<SDL.h>
 
-1449937269 source:d:\github\orbit-wars\client\includes\game\player.cpp
+1450538883 source:d:\github\orbit-wars\client\includes\game\player.cpp
 	"player.h"
 	"object_command.h"
 	"moving_object.h"
@@ -9522,14 +9522,15 @@
 	"object_command.h"
 	"../physics/physics_component.h"
 
-1449938093 d:\github\orbit-wars\client\includes\game\object_command.h
+1450547442 d:\github\orbit-wars\client\includes\game\object_command.h
 
 1436795329 d:\github\orbit-wars\client\includes\game\object_state.h
 
-1438447362 d:\github\orbit-wars\client\includes\physics\physics_component.h
+1450553055 d:\github\orbit-wars\client\includes\physics\physics_component.h
 	<memory>
 	<SDL.h>
 	"polygon.h"
+	"../main_logic/game_logic.h"
 	"../game/moving_object.h"
 	"../game/static_object.h"
 
@@ -9554,9 +9555,8 @@
 	<string>
 	<vector>
 
-1438449449 d:\github\orbit-wars\client\includes\physics\physics_engine.h
+1450553162 d:\github\orbit-wars\client\includes\physics\physics_engine.h
 	"polygon.h"
-	"physics_component.h"
 	"../game/static_object.h"
 	<vector>
 	<mutex>
@@ -9710,12 +9710,13 @@
 	"physics_component.h"
 	<SDL.h>
 
-1438449522 source:d:\github\orbit-wars\client\includes\physics\physics_engine.cpp
+1450553153 source:d:\github\orbit-wars\client\includes\physics\physics_engine.cpp
 	"physics_engine.h"
 	"../utility/stopwatch.h"
 	<chrono>
+	"physics_component.h"
 
-1436630435 source:d:\github\orbit-wars\client\includes\physics\polygon.cpp
+1450542094 source:d:\github\orbit-wars\client\includes\physics\polygon.cpp
 	"polygon.h"
 
 1436630611 source:d:\github\orbit-wars\client\includes\utility\configuration.cpp
@@ -9781,7 +9782,17 @@
 1449935975 d:\github\orbit-wars\client\includes\physics\movement_command.h
 	"../game/object_command.h"
 
-1449936769 source:d:\github\orbit-wars\client\includes\game\object_command.cpp
+1450538731 source:d:\github\orbit-wars\client\includes\game\object_command.cpp
 	"object_command.h"
 	"SDL.h"
+
+1450553112 source:d:\github\orbit-wars\client\includes\physics\nongravity_object_physics.cpp
+	"nongravity_object_physics.h"
+	"../main_logic/game_logic.h"
+	"movement_command.h"
+
+1450553085 d:\github\orbit-wars\client\includes\physics\nongravity_object_physics.h
+	"physics_component.h"
+	<memory>
+	<SDL.h>
 

@@ -55,6 +55,17 @@ bool Polygon::is_inside(SDL_Point searched) const
     return winding;
 }
 
+bool Polygon::is_colliding(Polygon& searched) const
+{
+    for(unsigned int b = 0 , b_size = points_.size() ; b < b_size ; b++)
+    {
+        if(searched.is_inside(points_[b]))
+        {
+            return true;
+        }
+    }
+    return false;
+}
 
 Polygon get_rectangle(int x, int y, int w, int h)
 {

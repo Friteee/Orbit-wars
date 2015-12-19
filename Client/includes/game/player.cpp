@@ -5,7 +5,6 @@
 namespace game
 {
 
-#define MAX_COMMAND_COUNT 100
 
 Player::Player()
 {
@@ -27,7 +26,17 @@ void Player::update()
 {
     command_mutex_.lock();
 
-
+    auto current_command = commands_.end();
+    if(current_command != commands_.begin())
+    {
+        current_command--;
+    }
+    while(current_command != commands_.begin())
+    {
+        (*current_command).execute(this);
+        current_command--;
+    }
+    commands_.clear();
 
     command_mutex_.unlock();
 

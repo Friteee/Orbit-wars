@@ -16,12 +16,12 @@ Object_command::Object_command(unsigned int timestamp , Command_implementation *
     implementation_ = implementation;
 }
 
-void Object_command::execute(Moving_object * object)
+void Object_command::execute(Moving_object * object) const
 {
     implementation_->execute(object);
 }
 
-void Object_command::redo   (Moving_object * object)
+void Object_command::redo   (Moving_object * object) const
 {
     implementation_->redo(object);
 }

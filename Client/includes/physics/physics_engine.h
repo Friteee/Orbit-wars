@@ -2,7 +2,6 @@
 #define PHYSICS_ENGINE_H_INCLUDED
 
 #include "polygon.h"
-#include "physics_component.h"
 #include "../game/static_object.h"
 #include <vector>
 #include <mutex>
@@ -13,6 +12,7 @@
 namespace physics
 {
 
+class Physics_component;
 
 /** \class physics::Physics_engine
  *
@@ -32,15 +32,16 @@ class Physics_engine
 public:
 
     void add_static_object(game::Static_object * added);
-    void add_moving_object(game::Moving_object * added);
+    void add_moving_object(Physics_component * added);
     void delete_static_object(game::Static_object * deleted);
-    void delete_moving_object(game::Moving_object * deleted);
+    void delete_moving_object(Physics_component * deleted);
     void run(unsigned int ticks_per_s);
     void reset();
 
 private:
     void check_addition();
     void update_moving();
+    void update_objects();
     void check_collision();
     void thread();
 
@@ -56,14 +57,14 @@ private:
     class Moving_command
     {
     public:
-        game::Moving_object * get();
-        void set(game::Moving_object * added);
+        Physics_component * get();
+        void set(Physics_component * added);
     private:
-        game::Moving_object * object_;
+        Physics_component * object_;
     };
 
     std::vector<game::Static_object *> static_objects_;
-    std::vector<game::Moving_object *> moving_objects_;
+    std::vector<Physics_component *>   moving_objects_;
     std::mutex                         objects_change_;
     std::list <Static_command>         static_addition_;
     std::list <Moving_command>         moving_addition_;

@@ -1,6 +1,7 @@
 #include "physics_engine.h"
 #include "../utility/stopwatch.h"
 #include <chrono>
+#include "physics_component.h"
 
 namespace physics
 {
@@ -29,7 +30,7 @@ void Physics_engine::add_static_object(game::Static_object * added)
  *
  */
 
-void Physics_engine::add_moving_object(game::Moving_object * added)
+void Physics_engine::add_moving_object(Physics_component * added)
 {
     objects_change_.lock();
 
@@ -66,7 +67,7 @@ void Physics_engine::delete_static_object(game::Static_object * deleted)
  *
  *  WARNING - performance cost of O(n)
  */
-void Physics_engine::delete_moving_object(game::Moving_object * deleted)
+void Physics_engine::delete_moving_object(Physics_component * deleted)
 {
     objects_change_.lock();
 
@@ -101,7 +102,7 @@ void Physics_engine::check_addition()
     objects_change_.lock();
 
     game::Static_object * buffer;
-    game::Moving_object * buffer_component;
+    Physics_component * buffer_component;
     while(!moving_addition_.empty())
     {
         buffer_component = moving_addition_.front().get();
@@ -171,7 +172,7 @@ void Physics_engine::update_moving()
     //update
     for(unsigned int a = 0; a < moving_objects_.size() ; a++)
     {
-        moving_objects_[a]->get_physics_component()->update(ticks_per_second_);
+        moving_objects_[a]->update(ticks_per_second_);
     }
 }
 
@@ -180,7 +181,7 @@ void Physics_engine::check_collision()
     //check and notify collisions for moving - static objects
     for(unsigned int a = 0 , a_size = moving_objects_.size() ; a < a_size ; a++)
     {
-        const Polygon & buffer = moving_objects_[a]->get_physics_component()->get_polygon();
+        const Polygon & buffer = moving_objects_[a]->get_polygon();
         const std::vector<SDL_Point>& points = buffer.get_points();
         for(unsigned int b = 0 , b_size = points.size() ; b < b_size ; b++)
         {
@@ -188,7 +189,7 @@ void Physics_engine::check_collision()
             {
                 if(static_objects_[c]->get_polygon().is_inside(points[b]))
                 {
-                    moving_objects_[a]->get_physics_component()->notify_static(b , static_objects_[c]);
+                    moving_objects_[a]->notify_static(b , static_objects_[c]);
                 }
             }
         }
@@ -196,18 +197,16 @@ void Physics_engine::check_collision()
     //check and notify collisions for moving - moving objects
     for(unsigned int a = 0 , a_size = moving_objects_.size() ; a < a_size ; a++)
     {
-        const Polygon & buffer = moving_objects_[a]->get_physics_component()->get_polygon();
+        const Polygon & buffer = moving_objects_[a]->get_polygon();
         const std::vector<SDL_Point>& points = buffer.get_points();
         for(unsigned int b = 0 , b_size = points.size() ; b < b_size ; b++)
         {
-            for(unsigned int c = 0 , c_size = moving_objects_.size() ; c < c_size; c++)
+            for(unsigned int c = a + 1 , c_size = moving_objects_.size() ; c < c_size; c++)
             {
-                if(a==c)
-                    continue;
-                else if(moving_objects_[c]->get_physics_component()->get_polygon().is_inside(points[b]))
+                if(moving_objects_[c]->get_polygon().is_inside(points[b]))
                 {
-                    moving_objects_[a]->get_physics_component()->notify_moving(moving_objects_[b]->get_physics_component());
-                    moving_objects_[b]->get_physics_component()->notify_moving(moving_objects_[a]->get_physics_component());
+                    moving_objects_[a]->notify_moving(moving_objects_[b]);
+                    moving_objects_[b]->notify_moving(moving_objects_[a]);
                 }
             }
         }
@@ -227,6 +226,8 @@ void Physics_engine::thread()
         update_moving();
 
         check_collision();
+
+        update_objects();
 
         if(ticks.get_ticks() < 1000.f / ticks_per_second_ && !stop_)
         {
@@ -251,14 +252,22 @@ void Physics_engine::Static_command::set(game::Static_object * added)
     object_ = added;
 }
 
-game::Moving_object * Physics_engine::Moving_command::get()
+Physics_component * Physics_engine::Moving_command::get()
 {
     return object_;
 }
 
-void Physics_engine::Moving_command::set(game::Moving_object * added)
+void Physics_engine::Moving_command::set(Physics_component * added)
 {
     object_ = added;
+}
+
+void Physics_engine::update_objects()
+{
+    for(unsigned int a = 0 , a_size = moving_objects_.size() ; a < a_size ; a++)
+    {
+        moving_objects_[a]->update_object();
+    }
 }
 
 }

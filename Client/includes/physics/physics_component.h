@@ -4,8 +4,10 @@
 #include <memory>
 #include <SDL.h>
 #include "polygon.h"
+#include "../main_logic/game_logic.h"
 #include "../game/moving_object.h"
 #include "../game/static_object.h"
+
 
 namespace game
 {
@@ -25,11 +27,13 @@ namespace physics
 class Physics_component
 {
 public:
-
+    // update the underlying object
+    virtual void update_object() = 0;
+    // update speed and position
     virtual void update(unsigned int time) = 0;
     // number of the point, collided with static object
     virtual void notify_static(unsigned int point , game::Static_object * object) = 0;
-    //notify about collision with moving object
+    // notify about collision with moving object
     virtual void notify_moving(Physics_component* moving) = 0;
 
     virtual SDL_Point get_interpolated_location(unsigned int time) = 0;

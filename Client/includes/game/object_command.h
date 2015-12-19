@@ -31,13 +31,12 @@ public:
     Object_command(Command_implementation * implementation);
     Object_command(unsigned int timestamp , Command_implementation * implementation);
     ~Object_command();
-    void execute(Moving_object * object);
-    void redo   (Moving_object * object);
+    void execute(Moving_object * object) const;
+    void redo   (Moving_object * object) const;
     bool operator<(const Object_command& rhs) const;
     bool operator>(const Object_command& rhs) const;
     bool operator<=(const Object_command& rhs) const;
     bool operator>=(const Object_command& rhs) const;
-
     unsigned int get_time()
     {
         return timestamp_;
