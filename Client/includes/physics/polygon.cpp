@@ -64,6 +64,13 @@ bool Polygon::is_colliding(Polygon& searched) const
             return true;
         }
     }
+    for(unsigned int b = 0 , b_size = searched.points_.size() ; b < b_size ; b++)
+    {
+        if(this->is_inside(searched.points_[b]))
+        {
+            return true;
+        }
+    }
     return false;
 }
 
