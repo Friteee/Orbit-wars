@@ -9481,10 +9481,11 @@
 	<SDL.h>
 	"../video/texture.h"
 
-1438529688 d:\github\orbit-wars\client\includes\video\texture.h
+1450969203 d:\github\orbit-wars\client\includes\video\texture.h
 	<string>
 	<memory>
 	<SDL.h>
+	<SDL_image.h>
 	<SDL_ttf.h>
 
 1376156543 d:\github\orbit-wars\client\sdl2\sdl_ttf.h
@@ -9672,8 +9673,9 @@
 	"main_logic/game_logic.h"
 	<stdio.h>
 
-1436794050 source:d:\github\orbit-wars\client\includes\main_logic\game_logic.cpp
+1450969937 source:d:\github\orbit-wars\client\includes\main_logic\game_logic.cpp
 	<SDL.h>
+	<SDL_image.h>
 	<stdio.h>
 	"game_logic.h"
 	"../video/video_subsystem.h"
@@ -9716,7 +9718,7 @@
 	<chrono>
 	"physics_component.h"
 
-1450542094 source:d:\github\orbit-wars\client\includes\physics\polygon.cpp
+1450945525 source:d:\github\orbit-wars\client\includes\physics\polygon.cpp
 	"polygon.h"
 
 1436630611 source:d:\github\orbit-wars\client\includes\utility\configuration.cpp
@@ -9795,4 +9797,10 @@
 	"physics_component.h"
 	<memory>
 	<SDL.h>
+
+1376156342 d:\github\orbit-wars\client\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
 

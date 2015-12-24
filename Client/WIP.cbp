@@ -50,7 +50,7 @@
 			<Add directory="boost_1_58_0" />
 		</Compiler>
 		<Linker>
-			<Add option="-lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_mixer" />
+			<Add option="-lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_mixer -lSDL2_image" />
 			<Add option="-static-libgcc -static-libstdc++ -lboost_system-mgw51-mt-s-1_58" />
 			<Add option="-lws2_32" />
 			<Add option="-lwsock32" />
@@ -62,10 +62,13 @@
 			<Add library="SDL2_ttf_lib\libSDL2_ttf.dll.a" />
 			<Add library="SDL2_mix\libSDL2_mixer.a" />
 			<Add library="SDL2_mix\libSDL2_mixer.dll.a" />
+			<Add library="SDL2_image_32\libSDL2_image.a" />
+			<Add library="SDL2_image_32\libSDL2_image.dll.a" />
 			<Add library="boost_1_58_0\stage\lib\libboost_system-mgw51-mt-s-1_58.a" />
 			<Add directory="SDL2lib" />
 			<Add directory="SDL2_ttf_lib" />
 			<Add directory="SDL2_mix" />
+			<Add directory="SDL2_image_32" />
 		</Linker>
 		<Unit filename="includes/audio/audio.cpp" />
 		<Unit filename="includes/audio/audio.h" />

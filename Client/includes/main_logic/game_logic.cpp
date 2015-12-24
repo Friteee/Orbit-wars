@@ -1,5 +1,6 @@
 
 #include <SDL.h>
+#include <SDL_image.h>
 #include <stdio.h>
 #include "game_logic.h"
 #include "../video/video_subsystem.h"
@@ -46,6 +47,11 @@ bool Game_logic::initialize(const char* filename)
     {
         printf("Couldn't initialize SDL subsystems\n");
         printf("Error = %s\n", SDL_GetError());
+    }
+    if(IMG_Init(IMG_INIT_JPG|IMG_INIT_PNG))
+    {
+        printf("Couldn't initialize SDL image library functions\n");
+        printf("Error = %s\n", IMG_GetError());
     }
     if(TTF_Init())
     {

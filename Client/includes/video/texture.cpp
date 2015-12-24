@@ -176,19 +176,19 @@ void Texture::set_alpha(unsigned int alpha)
 
 void Texture::create_surface(std::string filename)
 {
-    SDL_Surface * init_surface = SDL_LoadBMP(filename.c_str());
+    SDL_Surface * init_surface = IMG_Load(filename.c_str());
     surface_ = std::make_shared<SDL_Surface*>(init_surface);
     if(!init_surface)
     {
         printf("Error : Error creating surface from %s \n", filename.c_str());
-        printf("Error code : %s\n",SDL_GetError());
+        printf("Error code : %s\n",IMG_GetError());
         assert(0);
     }
 }
 
 void Texture::create_surface(std::string filename , SDL_Rect boundaries)
 {
-    SDL_Surface * init_surface = SDL_LoadBMP(filename.c_str());
+    SDL_Surface * init_surface = IMG_Load(filename.c_str());
     SDL_Surface * cropped_surface = SDL_CreateRGBSurface(init_surface->flags, boundaries.w, boundaries.h, init_surface->format->BitsPerPixel, init_surface->format->Rmask, init_surface->format->Gmask, init_surface->format->Bmask, init_surface->format->Amask);
     SDL_BlitSurface(init_surface, &boundaries, cropped_surface, 0);
     SDL_FreeSurface(init_surface);
@@ -196,7 +196,7 @@ void Texture::create_surface(std::string filename , SDL_Rect boundaries)
     if(!cropped_surface)
     {
         printf("Error : Error creating surface from %s \n", filename.c_str());
-        printf("Error code : %s\n",SDL_GetError());
+        printf("Error code : %s\n",IMG_GetError());
         assert(0);
     }
 }
