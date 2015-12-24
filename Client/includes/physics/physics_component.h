@@ -44,6 +44,8 @@ public:
     {
         object_ = init_object;
         polygon_ = init_polygon;
+        registered = true;
+        main_logic::Game_logic::get_engine().add_moving_object(this);
     }
 
     const Polygon & get_polygon()
@@ -61,6 +63,8 @@ protected:
     game::Moving_object     * object_;
     // associated polygon
     std::shared_ptr<Polygon>  polygon_;
+
+    bool registered = false;
 
 };
 

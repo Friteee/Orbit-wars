@@ -48,7 +48,7 @@ bool Game_logic::initialize(const char* filename)
         printf("Couldn't initialize SDL subsystems\n");
         printf("Error = %s\n", SDL_GetError());
     }
-    if(IMG_Init(IMG_INIT_JPG|IMG_INIT_PNG))
+    if((IMG_Init(IMG_INIT_JPG|IMG_INIT_PNG)&(IMG_INIT_JPG|IMG_INIT_PNG)) != (IMG_INIT_JPG|IMG_INIT_PNG))
     {
         printf("Couldn't initialize SDL image library functions\n");
         printf("Error = %s\n", IMG_GetError());
@@ -73,6 +73,13 @@ Game_logic::Game_logic():
     is_created_   (video::Video_subsystem::initialize_subsystem(width_ , height_ , fullscreen_))
 {
     video::Video_subsystem::set_programs_name(main_config_.find_string("programs_name").c_str());
+
+    SDL_Rect init_camera;
+    init_camera.x = 0;
+    init_camera.y = 0;
+    init_camera.w = video::Video_subsystem::get_width();
+    init_camera.h = video::Video_subsystem::get_height();
+    video::Camera::initialize(init_camera);
 
     if(!audio::Audio_subsystem::initialize_subsystem())
     {
@@ -137,6 +144,8 @@ Game_logic::~Game_logic()
     video::Video_subsystem::free_subsystem();
     SDL_QuitSubSystem(SDL_INIT_VIDEO|SDL_INIT_TIMER|SDL_INIT_EVENTS);
     SDL_Quit();
+    IMG_Quit();
+    TTF_Quit();
     return;
 }
 

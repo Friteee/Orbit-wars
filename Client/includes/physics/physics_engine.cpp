@@ -119,7 +119,7 @@ void Physics_engine::check_addition()
     {
         buffer = static_deletion_.front().get();
         static_deletion_.pop_front();
-        for(int a = 0, b = static_objects_.size(); a<b; a++)
+        for(int a = 0, b = static_objects_.size(); a < b; a++)
         {
             if(static_objects_[a] == buffer)
             {
@@ -142,8 +142,6 @@ void Physics_engine::check_addition()
         }
     }
     objects_change_.unlock();
-
-    //todo
 }
 
 
@@ -268,6 +266,11 @@ void Physics_engine::update_objects()
     {
         moving_objects_[a]->update_object();
     }
+}
+
+Physics_engine::~Physics_engine()
+{
+    reset();
 }
 
 }

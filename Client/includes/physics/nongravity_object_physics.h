@@ -11,7 +11,9 @@ namespace physics
 class Nongravity_object_physics : public Physics_component
 {
 public:
-    Nongravity_object_physics(SDL_Point init_location , std::shared_ptr<Polygon> init_polygon);
+    Nongravity_object_physics(SDL_Point init_location );
+
+    Nongravity_object_physics(int x, int y);
 
     ~Nongravity_object_physics();
 

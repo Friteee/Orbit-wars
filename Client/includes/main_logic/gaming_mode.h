@@ -9,6 +9,11 @@
 #include "../audio/music.h"
 #include <string>
 
+namespace game
+{
+    class Player;
+}
+
 namespace main_logic
 {
 
@@ -34,7 +39,8 @@ private:
     utility::Configuration * main_config_;
     // gui elements manager
     gui::Gui_manager         gui_manager_;
-
+    // player object
+    game::Player * player_;
 
 };
 

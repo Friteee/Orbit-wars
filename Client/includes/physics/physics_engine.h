@@ -31,6 +31,7 @@ class Physics_engine
 
 public:
 
+    ~Physics_engine();
     void add_static_object(game::Static_object * added);
     void add_moving_object(Physics_component * added);
     void delete_static_object(game::Static_object * deleted);

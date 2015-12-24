@@ -30,6 +30,7 @@ class Object_command
 public:
     Object_command(Command_implementation * implementation);
     Object_command(unsigned int timestamp , Command_implementation * implementation);
+    Object_command(Object_command &&);
     ~Object_command();
     void execute(Moving_object * object) const;
     void redo   (Moving_object * object) const;
@@ -49,6 +50,7 @@ public:
 
 protected:
     unsigned int timestamp_;
+    int object_count_ = 0;
     Command_implementation * implementation_;
 };
 

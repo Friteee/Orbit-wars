@@ -57,7 +57,7 @@ Configuration::Configuration(std::string filename)
 /**
  * Function to find a string in a vector, containing configurations
  * Returns ONE string if the searched value is found
- * Else returns 'NOT FOUND'
+ * Else returns empty string
  */
 std::string Configuration::find_string(std::string searched)
 {
@@ -68,7 +68,8 @@ std::string Configuration::find_string(std::string searched)
             return found.second;
         }
     }
-    return "NOT FOUND";
+    printf("%s in config from %s is not found\n",searched.c_str(),file_.c_str());
+    return "";
 }
 
 /**

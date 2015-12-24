@@ -24,6 +24,8 @@ class Camera
     static void set_position(int init_width , int init_height , int init_x , int init_y);
     // overload set_position
     static void set_position(SDL_Rect init_location);
+    // overload set_position not to need width and height
+    static void set_position(int init_x , int init_y);
     // get position
     static SDL_Rect get_position();
     // initialize subsystem

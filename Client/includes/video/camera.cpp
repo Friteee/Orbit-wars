@@ -117,6 +117,16 @@ void Camera::set_position(int init_width , int init_height , int init_x , int in
     Camera::instance_->location_.w=init_width;
     Camera::instance_->location_.h=init_height;
 }
+
+/**
+ * Function to set position for camera
+ */
+void Camera::set_position(int init_x , int init_y)
+{
+    Camera::instance_->location_.x=init_x;
+    Camera::instance_->location_.y=init_y;
+}
+
 /**
  * Function to set position for camera
  */

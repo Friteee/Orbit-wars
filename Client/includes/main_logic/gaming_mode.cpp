@@ -5,8 +5,7 @@
 #include "../gui/progress_bar.h"
 #include "../gui/click.h"
 #include "../audio/music.h"
-#include "../game/moving_object.h"
-
+#include "../game/player.h"
 #include <cstdlib>
 #include <sstream>
 
@@ -115,6 +114,8 @@ bool Gaming_mode::run()
 
     gui_manager_.update();
 
+    player_->update();
+
     // main logic here
     main_background_.show();
 
@@ -134,6 +135,8 @@ Gaming_mode::Gaming_mode(utility::Configuration * init_config ):
 {
     // background
     main_background_.change_image(main_config_->find_string("game_background").c_str());
+
+    player_ = new game::Player();
 }
 
 

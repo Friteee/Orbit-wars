@@ -6,7 +6,7 @@
 namespace physics
 {
 
-Nongravity_object_physics::Nongravity_object_physics(SDL_Point init_location , std::shared_ptr<Polygon> init_polygon)
+Nongravity_object_physics::Nongravity_object_physics(SDL_Point init_location)
 {
     horizontal_acceleration_ = 0;
     vertical_acceleration_ = 0;
@@ -15,13 +15,23 @@ Nongravity_object_physics::Nongravity_object_physics(SDL_Point init_location , s
     x_speed_ = 0;
     y_speed_ = 0;
     friction_ = 0.99;
-    polygon_ = init_polygon;
-    main_logic::Game_logic::get_engine().add_moving_object(this);
+}
+
+Nongravity_object_physics::Nongravity_object_physics(int x, int y)
+{
+    horizontal_acceleration_ = 0;
+    vertical_acceleration_ = 0;
+    x_ = x;
+    y_ = y;
+    x_speed_ = 0;
+    y_speed_ = 0;
+    friction_ = 0.99;
 }
 
 Nongravity_object_physics::~Nongravity_object_physics()
 {
-    main_logic::Game_logic::get_engine().delete_moving_object(this);
+    if(registered)
+        main_logic::Game_logic::get_engine().delete_moving_object(this);
 }
 
 void Nongravity_object_physics::update(unsigned int time)

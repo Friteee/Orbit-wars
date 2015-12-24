@@ -87,8 +87,8 @@ Polygon get_rectangle(int x, int y, int w, int h)
 
 void Polygon::set(int init_x , int init_y)
 {
-    x_=init_x;
-    y_=init_y;
+    x_ = init_x;
+    y_ = init_y;
     for(unsigned int a = 0; a < points_.size() ; a++)
     {
         points_[a].x = starting_points_[a].x + x_;
